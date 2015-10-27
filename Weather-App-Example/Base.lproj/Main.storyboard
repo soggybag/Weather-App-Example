@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -79,6 +79,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjC-tG-H6u">
+                                <rect key="frame" x="20" y="28" width="69" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -122,11 +129,12 @@
                         <outlet property="cityButton" destination="PPD-NN-WoC" id="i7W-Tc-KfO"/>
                         <outlet property="cloudsLabel" destination="X27-eL-5Z8" id="4c5-LW-FjX"/>
                         <outlet property="descriptionLabel" destination="j9T-Cw-n0l" id="TVd-oZ-r2R"/>
+                        <outlet property="humidityLabel" destination="mjC-tG-H6u" id="rzW-R7-2F8"/>
                         <outlet property="iconImage" destination="wf7-ap-JnO" id="fWO-bq-GL3"/>
                         <outlet property="rainLabel" destination="zAT-Po-eZY" id="47V-5A-22G"/>
                         <outlet property="tempLabel" destination="LJA-HS-d9a" id="yKi-O2-2Rq"/>
-                        <outlet property="tempMaxLabel" destination="3QP-7d-wkr" id="OXD-Pf-sfW"/>
-                        <outlet property="tempMinLabel" destination="4iL-BB-haE" id="kxs-Td-CDR"/>
+                        <outlet property="tempMaxLabel" destination="3QP-7d-wkr" id="urt-Zb-Jfq"/>
+                        <outlet property="tempMinLabel" destination="4iL-BB-haE" id="in1-0K-dnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

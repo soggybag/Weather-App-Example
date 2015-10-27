@@ -20,6 +20,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var tempMinLabel: UILabel!
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var humidityLabel: UILabel!
+
     
     
     @IBAction func setCityTapped(sender: UIButton) {
@@ -74,6 +76,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         cityButton.setTitle(weather.cityName, forState: .Normal)
         iconImage.image = UIImage(named: weather.icon)
         cloudsLabel.text = "\(weather.clouds)%"
+        tempMinLabel.text = "\(weather.tempMin)"
+        tempMaxLabel.text = "\(weather.tempMax)"
     }
     
     

@@ -30,6 +30,10 @@ class WeatherService {
             let lon = json["coord"]["lon"].double
             let lat = json["coord"]["lat"].double
             let temp = json["main"]["temp"].double
+            let tempMin = json["main"]["temp_min"].double
+            let tempMax = json["main"]["temp_max"].double
+            let humidity = json["main"]["humidity"].double
+            let pressure = json["main"]["pressure"].double
             let name = json["name"].string
             let desc = json["weather"][0]["description"].string
             let icon = json["weather"][0]["icon"].string
@@ -40,7 +44,11 @@ class WeatherService {
                 temp: temp!,
                 description: desc!,
                 icon: icon!,
-                clouds: clouds!
+                clouds: clouds!,
+                tempMin: tempMin!,
+                tempMax: tempMax!,
+                humidity: humidity!,
+                pressure: pressure!
             )
             
             if self.delegate != nil {
@@ -48,8 +56,6 @@ class WeatherService {
                     self.delegate?.setWeather(weather)
                 })
             }
-            
-            print("Lat: \(lat!) lon: \(lon!) temp: \(temp!)")
         }
         
         task.resume()
