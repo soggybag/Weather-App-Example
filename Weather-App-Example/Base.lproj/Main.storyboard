@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zAF-o6-htc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="13d.png" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-ap-JnO">
                                 <rect key="frame" x="20" y="28" width="339" height="619"/>
                                 <animations/>
@@ -86,6 +90,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIz-BK-FLB">
+                                <rect key="frame" x="163" y="617" width="41" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="photoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4L-pN-EBH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -100,17 +112,21 @@
                             <constraint firstItem="4iL-BB-haE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="GHr-sW-qxc"/>
                             <constraint firstItem="wf7-ap-JnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Gqg-bd-v6i"/>
                             <constraint firstItem="zAT-Po-eZY" firstAttribute="leading" secondItem="X27-eL-5Z8" secondAttribute="trailing" constant="8" id="HZB-WD-AaS"/>
+                            <constraint firstItem="zAF-o6-htc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KAZ-tp-JY9"/>
                             <constraint firstItem="4iL-BB-haE" firstAttribute="top" secondItem="j9T-Cw-n0l" secondAttribute="bottom" constant="31" id="Lgm-7a-fUv"/>
+                            <constraint firstAttribute="trailing" secondItem="zAF-o6-htc" secondAttribute="trailing" id="Mlz-0T-Khr"/>
                             <constraint firstAttribute="trailing" secondItem="wf7-ap-JnO" secondAttribute="trailing" constant="16" id="V7W-3g-2KR"/>
                             <constraint firstItem="zAT-Po-eZY" firstAttribute="top" secondItem="LJA-HS-d9a" secondAttribute="bottom" constant="-3" id="XY8-nX-k9c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j9T-Cw-n0l" secondAttribute="trailing" constant="-4" id="Y9a-q4-D98"/>
                             <constraint firstItem="LJA-HS-d9a" firstAttribute="top" secondItem="3QP-7d-wkr" secondAttribute="bottom" constant="20" id="ZJp-Xd-bpS"/>
                             <constraint firstItem="X27-eL-5Z8" firstAttribute="top" secondItem="LJA-HS-d9a" secondAttribute="bottom" constant="-3" id="ZLt-F6-ugo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zAF-o6-htc" secondAttribute="bottom" id="ZUI-ba-NtW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3QP-7d-wkr" secondAttribute="trailing" constant="-4" id="ZcZ-9z-IRl"/>
                             <constraint firstItem="LJA-HS-d9a" firstAttribute="top" secondItem="4iL-BB-haE" secondAttribute="bottom" constant="20" id="bC2-f1-7Cm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zAT-Po-eZY" secondAttribute="trailing" constant="-8" id="bZo-gD-bme"/>
                             <constraint firstItem="j9T-Cw-n0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-12" id="hA5-pa-Kr7"/>
                             <constraint firstItem="PPD-NN-WoC" firstAttribute="top" secondItem="X27-eL-5Z8" secondAttribute="bottom" constant="71" id="hPw-c3-oQS"/>
+                            <constraint firstItem="zAF-o6-htc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hVb-gK-Fmm"/>
                             <constraint firstItem="xNr-aP-u3G" firstAttribute="leading" secondItem="LJA-HS-d9a" secondAttribute="trailing" constant="-8" id="jdy-4i-WTb"/>
                             <constraint firstItem="3QP-7d-wkr" firstAttribute="leading" secondItem="4iL-BB-haE" secondAttribute="trailing" constant="8" id="m8N-60-Wxu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PPD-NN-WoC" secondAttribute="trailing" id="mtI-BU-MyM"/>
@@ -126,6 +142,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="zAF-o6-htc" id="FWZ-Xp-J5p"/>
                         <outlet property="cityButton" destination="PPD-NN-WoC" id="i7W-Tc-KfO"/>
                         <outlet property="cloudsLabel" destination="X27-eL-5Z8" id="4c5-LW-FjX"/>
                         <outlet property="descriptionLabel" destination="j9T-Cw-n0l" id="TVd-oZ-r2R"/>

@@ -21,7 +21,17 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var humidityLabel: UILabel!
-
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    
+    
+    
+    @IBAction func photoButtonTapped(sender: AnyObject) {
+        
+    }
+    
+    
     
     
     @IBAction func setCityTapped(sender: UIButton) {
@@ -78,6 +88,16 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         cloudsLabel.text = "\(weather.clouds)%"
         tempMinLabel.text = "\(weather.tempMin)"
         tempMaxLabel.text = "\(weather.tempMax)"
+    }
+    
+    
+    func weatherErrorWithMessage(message: String) {
+        // display an error message from weather service
+        print("Weather Error Message: \(message)")
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(cancel)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
