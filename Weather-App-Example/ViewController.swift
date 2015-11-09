@@ -78,28 +78,37 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     
     
     
-    // MARK: - Weather Service Delegate
+    // MARK: - Weather Service Delegate Methods
     
     func setWeather(weather: Weather) {
-        tempLabel.text = "\(weather.tempC)"
+        
+        let formatter = NSNumberFormatter()
+        // formatter.numberStyle = .DecimalStyle
+        // formatter.maximumFractionDigits = 1
+        // formatter.minimumFractionDigits = 1
+        
+        let f = formatter.stringFromNumber(weather.tempF)!
+        
+        print(weather.tempF)
+        tempLabel.text = "\(f)"
+        
         descriptionLabel.text = weather.description
         cityButton.setTitle(weather.cityName, forState: .Normal)
         iconImage.image = UIImage(named: weather.icon)
         cloudsLabel.text = "\(weather.clouds)%"
-        tempMinLabel.text = "\(weather.tempMin)"
+        
+        let min = formatter.stringFromNumber(weather.tempMin)
+        tempMinLabel.text = min
         tempMaxLabel.text = "\(weather.tempMax)"
     }
     
-    
     func weatherErrorWithMessage(message: String) {
-        // display an error message from weather service
-        print("Weather Error Message: \(message)")
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
-        alert.addAction(cancel)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(ok)
+        
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
     
     
     override func viewDidLoad() {
