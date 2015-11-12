@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Social
+
 
 class ViewController: UIViewController, WeatherServiceDelegate {
     
@@ -33,11 +35,37 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     
     
     
+    @IBAction func socialButtonTapped(sender: AnyObject) {
+        // make an actionsheet 
+        // ask for FB or Twitter
+        tweetWeather()
+    }
+    
+    
+    
+    
     
     @IBAction func setCityTapped(sender: UIButton) {
         print("City Button Tapped")
         openCityAlert()
     }
+    
+    
+    
+    
+    
+    // MARK: Social stuff
+    
+    func tweetWeather() {
+        let twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        twitterVC.setInitialText("#weatheApp Temp desc...")
+        self.presentViewController(twitterVC, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
     
     
     

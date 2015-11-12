@@ -98,6 +98,14 @@
                                     <action selector="photoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4L-pN-EBH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igz-m9-QUL">
+                                <rect key="frame" x="22" y="617" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Social"/>
+                                <connections>
+                                    <action selector="socialButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrp-4h-4r2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
